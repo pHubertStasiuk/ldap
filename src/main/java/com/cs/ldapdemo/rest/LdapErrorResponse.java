@@ -1,16 +1,14 @@
-package com.luv2code.springdemo.rest;
+package com.cs.ldapdemo.rest;
 
-public class CustomerErrorResponse {
+public class LdapErrorResponse {
 
 	private int status;
 	private String message;
 	private long timeStamp;
 	
-	public CustomerErrorResponse() {
-		
-	}
+	public LdapErrorResponse() {}
 
-	public CustomerErrorResponse(int status, String message, long timeStamp) {
+	public LdapErrorResponse(int status, String message, long timeStamp) {
 		this.status = status;
 		this.message = message;
 		this.timeStamp = timeStamp;

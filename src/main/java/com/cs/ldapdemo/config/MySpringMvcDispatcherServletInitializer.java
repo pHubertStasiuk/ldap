@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.config;
+package com.cs.ldapdemo.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -6,10 +6,8 @@ public class MySpringMvcDispatcherServletInitializer extends AbstractAnnotationC
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		// TODO Auto-generated method stub
 		return null;
 	}
-
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		return new Class[] { DemoAppConfig.class };
