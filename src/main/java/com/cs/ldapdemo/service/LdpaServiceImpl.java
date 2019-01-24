@@ -1,7 +1,8 @@
 package com.cs.ldapdemo.service;
 
 
-import com.cs.ldapdemo.dao.LdapDAO;
+import com.cs.ldapdemo.dao.LdapDTO;
+import com.cs.ldapdemo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,16 +12,16 @@ import java.util.List;
 public class LdpaServiceImpl implements LdapService {
 
     @Autowired
-    private LdapDAO ldapDAO;
+    private LdapDTO ldapDTO;
 
     @Override
-    public boolean verifyCredentials(String userLogin, Byte[] userPassword) {
-        return this.ldapDAO.verifyCredentials(userLogin, userPassword);
+    public boolean verifyCredentials(User user) {
+        return this.ldapDTO.verifyCredentials(user);
     }
 
     @Override
-    public List<String> getRoles() {
-       return this.ldapDAO.getRoles();
+    public List<String> getRoles(User user) {
+       return this.ldapDTO.getRoles(user);
     }
 
 

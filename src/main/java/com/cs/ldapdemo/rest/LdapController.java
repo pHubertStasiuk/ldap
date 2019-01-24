@@ -18,13 +18,14 @@ public class LdapController {
 	@Autowired
 	private LdapService ldapService;
 
-	@GetMapping("/roles")
-	public List<String> getRoles() {
-		return this.ldapService.getRoles();
-	}
 	@PostMapping("/user/authentication")
 	public boolean verifyCredentials(@RequestBody User user) {
-		return this.ldapService.verifyCredentials(user.getLogin(), user.getPassword());
+		return this.ldapService.verifyCredentials(user);
+	}
+
+	@PostMapping("/roles")
+	public List<String> getRoles(@RequestBody User user) {
+		return this.ldapService.getRoles(user);
 	}
 }
 
