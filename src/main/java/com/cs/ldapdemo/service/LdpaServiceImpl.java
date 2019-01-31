@@ -6,6 +6,7 @@ import com.cs.ldapdemo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.naming.InvalidNameException;
 import java.util.List;
 
 @Service
@@ -20,7 +21,7 @@ public class LdpaServiceImpl implements LdapService {
     }
 
     @Override
-    public List<String> getRoles(User user) {
+    public List<String> getRoles(User user) throws InvalidNameException {
        return this.ldapDTO.getRoles(user);
     }
 

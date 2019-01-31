@@ -1,13 +1,12 @@
 package com.cs.ldapdemo.model;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class User {
 
     private String login;
     private String password;
-    private List<String> roles;
+    private List<String> memberOf;
 
     public User(String login, String password) {
         this.login = login;
@@ -33,13 +32,13 @@ public class User {
         this.password = password;
     }
 
-    public List<String> getRoles() {
-        return roles;
+    public List<String> getMemberOf() {
+        return memberOf;
 
     }
 
-    public void setRoles(List<String> roles) {
-        this.roles = roles;
+    public void setMemberOf(List<String> memberOf) {
+        this.memberOf = memberOf;
 
     }
 
@@ -48,7 +47,7 @@ public class User {
         return "User{" +
                 "login='" + login + '\'' +
                 ", password='" + password + '\'' +
-                ", roles=" + roles +
+                ", memberOf=" + memberOf +
                 '}';
     }
 }
